@@ -1,0 +1,12 @@
+{
+  "pending_queries": [
+    {
+      "id": 1,
+      "timestamp": "2025-12-31 17:13:19",
+      "query": "Co robią sieci?",
+      "status": "pending",
+      "reason": "OUT OF CORPUS (Clear query, no docs)",
+      "docs_found": 0
+    }
+  ]
+}
