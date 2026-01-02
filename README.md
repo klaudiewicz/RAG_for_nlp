@@ -92,4 +92,5 @@ System poprawnie odmawia odpowiedzi i zapisuje zapytanie do `pamiec_nierozwiazan
 ---
 
 Autor projektu: Klaudia Stodółkiewicz 
+
 Materiały źródłowe: Wykłady dr. Aleksandra Smywińskiego-Pohla, opracowania Jakuba 'morgula' Adamczyka.
