@@ -1,6 +1,7 @@
 from typing import List, Dict, Any
 from retrieval.qdrant import search_qdrant
 from retrieval.elastic import search_es
+import re
 
 def choose_weights(query):
 
@@ -76,12 +77,11 @@ def filter_retrieved(docs, min_tokens=30, max_docs=5):
 def retrieve_adaptive(user_input):
     qdrant_hits = search_qdrant(user_input)
     es_hits = search_es(user_input)
-	
+    weights, query_type = choose_weights(user_input)
     merged_docs = rrf_fusion_weighted(qdrant_hits, es_hits, weights, k=60)    
     final_docs, dropped_count = filter_retrieved(merged_docs, min_tokens=30, max_docs=5)
     
     return final_docs, query_type, dropped_count, weights
-
 
 # stare
 
