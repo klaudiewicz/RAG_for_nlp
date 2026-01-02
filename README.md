@@ -87,7 +87,7 @@ uvicorn main:app --reload
 System przypisuje wagi 0.8/0.2 (ES/Qdrant) i zwraca precyzyjną definicję.
 
 **Zapytanie spoza korpusu (Przepis na pizzę):**
-System poprawnie odmawia odpowiedzi i zapisuje zapytanie do `pamiec_nierozwiazane.json` .
+System poprawnie odmawia odpowiedzi i zapisuje zapytanie do `pending.json` .
 
 ---
 
