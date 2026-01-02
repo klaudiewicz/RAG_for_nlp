@@ -21,7 +21,6 @@ client_ollama = openai.OpenAI(
     api_key="ollama"                      
 )
 
-# Dalej reszta Twojego kodu: def search_qdrant...
 def rag_safe_mode(user_input):
     print(f"\n[SYSTEM] Start analizy: {user_input}")
 
