@@ -1,0 +1,124 @@
+[
+  {
+    "query": "Kto i kiedy wprowadził mechanizm atencji?",
+    "answer": "BRAK WYNIKÓW",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 0
+    }
+  },
+  {
+    "query": "Czym różni się podejście w LSTM od zwykłych RNN?",
+    "answer": "BRAK INFORMACJI o tym, że w dokumentach nie ma informacji na temat tego pytania.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 0
+    }
+  },
+  {
+    "query": "Jakie są wady wyrażeń regularnych w NLP?",
+    "answer": "Odpowiedź oparta na dokumentach:\n\nWyrażenia regularne mają kilka wad w kontekście NLP. Zgodnie z [2], choć kiedyś były one niezastąpione, teraz większość systemów korzysta z dużych modeli językowych. Jednak, jak podkreślił Aleksander Smywiński-Pohl w [1] i [5], wyrażenia regularne są nadal niezbędne w etapie przygotowania danych (preprocessing). \n\nJedną z wad wyrażeń regularnych jest ich ograniczona skuteczność w przypadku prostego podziału tekstu. Jak wspomniał Aleksander Smywiński-Pohl w [5], prosta tokenizacja za pomocą wyrażeń regularnych napotyka wiele problemów.\n\nDodatkowo, jak zauważyła Magdalena Król w [3], tradycyjne metody NLP, takie jak parserzy i gramatyki zależnościowe, są nadal rozwijane przez wpływowe grupy językoznawcze na świecie. W erze modeli neuronowych problemem pozostawało przetwarzanie długich kontekstów; o ile dla modeli LSTM był to duży problem, o tyle transformery radzą sobie z tym znacznie lepiej.\n\nWnioskuję że wyrażenia regularne mają ograniczoną skuteczność w przypadku prostego podziału tekstu i nie są już tak popularne jak kiedyś.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "Aleksander Smywiński-Pohl",
+        "Magdalena Król"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Opisz architekturę Transformer i jej autorów.",
+    "answer": "Oto odpowiedź na podstawie dostępnych dokumentów:\n\nArchitektura Transformer została zaproponowana w artykule \"Attention Is All You Need\" opublikowanym w 2017 roku przez Vaswani et al. z Google Brain (dokument [2]). Jest to przełomowa architektura w dziedzinie NLP, która zastąpiła sieci rekurencyjne (RNN/LSTM) mechanizmem samo-atencji (Self-Attention), co umożliwiło zrównoleglenie obliczeń i lepsze radzenie sobie z długimi zależnościami w tekście.\n\nAutorami artykułu są Vaswani, Shazeer, Parmar, Uszkoreit i Jones (dokument [2]).",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "Vaswani et al.",
+        "Google Brain"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Co to jest Chiński Pokój?",
+    "answer": "BRAK INFORMACJI. W dokumentach nie ma informacji o Chińskim Pokoju.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Jakie modele powstały w 2025 roku?",
+    "answer": "BRAK WYNIKÓW",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [
+        "2025"
+      ],
+      "hallucinations": "Brak",
+      "score": 0
+    }
+  },
+  {
+    "query": "Wyjaśnij działanie algorytmu Viterbiego.",
+    "answer": "Zgodnie z dokumentem [1] (Autor: Aleksander Smywiński-Pohl), algorytm Viterbiego jest efektywnym algorytmem programowania dynamicznego, który zapamiętuje dla każdego stanu optymalną dotychczasową ścieżkę i jej prawdopodobieństwo. Dzięki temu pozwala na skuteczne dekodowanie tekstu.\n\nDokument [3] (Autor: Jakub 'morgul' Adamczyk) dodatkowo wyjaśnia, że algorytm Viterbiego jest używany w tagowaniu z HMM i polega na poszukiwaniu najbardziej prawdopodobnej sekwencji stanów dla danego ciągu wyrazów.\n\nWnioskuję, że algorytm Viterbiego służy do dekodowania tekstu poprzez znalezienie optymalnej ścieżki w przestrzeni stanów.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Czy model GPT jest modelem typu Encoder-only?",
+    "answer": "Odpowiedź to nie. Model GPT jest modelem typu Decoder-only, a nie tylko Encoder-only.\n\nDowód: W dokumencie [3], autor Jakub 'morgul' Adamczyk pisze o różnych wariantach BERTa i mówi, że \"GPT - i enkoder, i dekoder\". To sugeruje, że GPT jest modelem typu Decoder-only.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [
+        "Jakub 'morgul' Adamczyk"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Opis",
+      "score": 0
+    }
+  },
+  {
+    "query": "Jaka jest rola biblioteki Spacy?",
+    "answer": "Z dokumentów wynika, że biblioteka Spacy jest wydajna i łatwa w użyciu, a także oferuje bardzo dobre modele do tagowania i parsingu zależnościowego dla wielu języków, w tym polskiego. (wnioskuję że...) Biblioteka Spacy ma wiele zastosowań, m.in. automatyczne streszczanie tekstów, praca na pojedynczych zdaniach, automatyczna korekta tekstu i odwołania.\n\nDodatkowo, w dokumentie [4] autor pisze o \"sentencizer\" w bibliotece Spacy, który jest używany do automatycznego streszczania tekstów.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "Spacy"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Jaki jest najlepszy przepis na pizzę?",
+    "answer": "BRAK INFORMACJI. Nie ma informacji w dostępnych dokumentach o najlepszym przepisie na pizzę.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 0
+    }
+  }
+]

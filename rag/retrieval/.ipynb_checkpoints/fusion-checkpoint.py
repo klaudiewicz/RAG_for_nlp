@@ -1,7 +1,6 @@
-from typing import List, Dict, Any
+import re
 from retrieval.qdrant import search_qdrant
 from retrieval.elastic import search_es
-import re
 
 def choose_weights(query):
 

@@ -1,0 +1,123 @@
+[
+  {
+    "query": "Dlaczego funkcje aktywacji Sigmoid i Tanh są rzadziej używane w głębokich sieciach?",
+    "answer": "BRAK WYNIKÓW",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 0
+    }
+  },
+  {
+    "query": "Kto i w którym roku wprowadził sieci LSTM jako rozwiązanie problemu zanikającego gradientu?",
+    "answer": "Odpowiedź brzmi:\n(wnioskuję że) Sepp Hochreiter i Jürgen Schmidhuber wprowadzili sieć LSTM w 1997 roku jako rozwiązanie problemu zanikającego gradientu. Dosłowny fragment: \"Autorzy, Hochreiter i Schmidhuber (1997), wprowadzili w niej bramki.\"",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "Sepp Hochreiter",
+        "Jürgen Schmidhuber"
+      ],
+      "dates_in_answer": [
+        "1997"
+      ],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Wymień bramki występujące w architekturze LSTM i opisz ich funkcje.",
+    "answer": "Bramki występujące w architekturze LSTM to:\n\n* Bramka znaną jako \"Długa pamięć krótkotrwała\" (Long Short-Term Memory) - jest to główna bramka w sieci LSTM, która pozwala na przechowywanie informacji na długim okresie czasu.\n* Wzory są skomplikowane, ale kluczowe są operacje punktowe (element-wise multiplication) z wyjściami z sigmoidy (wartości 0-1), które działają jak zawory.\n\nFunkcje tych bramek to:\n\n* Pozwalanie na przechowywanie informacji na długim okresie czasu, co jest niezbędne do modelowania sekwencji o nieograniczonej długości.\n* Działanie jak zawory, co pozwala na kontrolowanie przepływu informacji w sieci.\n\n(wnioskuję że) Bramki w architekturze LSTM są kluczowym elementem umożliwiającym modelowanie sekwencji o nieograniczonej długości.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Jaki problem architektury Encoder-Decoder rozwiązał mechanizm atencji zaproponowany przez Bahdanau?",
+    "answer": "(wnioskuję że) Mechanizm atencji rozwiązał problem zmieszczania się w jednym wektorze o stałym rozmiarze całości treści zdania, niezależnie od jego długości. Dosłowny fragment: \"Problem polega na tym, że enkoder musi zmieścić całą treść zdania (niezależnie od jego długości) w jednym wektorze o stałym rozmiarze.\"",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Na czym polega mechanizm Self-Attention na przykładzie zdania o zwierzęciu i ulicy?",
+    "answer": "Mechanizm Self-Attention pozwala modelowi zrozumieć zależności między tokenami w tekście. Na przykładzie zdania \"The animal didn't cross the street because it was too tired.\" (gdzie \"it\" odnosi się do zwierzęcia) i \"The animal didn't cross the street because it was too crowded.\" (gdzie \"it\" odnosi się do ulicy), mechanizm atencji pozwala modelowi zrozumieć, że w pierwszym zdaniu \"it\" odnosi się do zwierzęcia, a w drugim do ulicy.\n\nCYTAT: „The animal didn't cross the street because it was too tired.” (Tu „it” odnosi się do zwierzęcia). „The animal didn't cross the street because it was too crowded.” (Tu „it” odnosi się do ulicy).",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "zwierzę",
+        "ulica"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "W jaki sposób obliczana jest atencja przy użyciu wektorów Query, Key i Value?",
+    "answer": "(wnioskuję że) Atencja obliczana jest poprzez iloczyn skalarny wektora Query (Q) badanego tokenu z wektorami Key (K) wszystkich tokenów, a następnie dzielenie wyniku przez pierwiastek z wymiaru wektora.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Czym charakteryzuje się model BERT i na czym polega zadanie Masked Language Model?",
+    "answer": "BRAK INFORMACJI o tym, co charakteryzuje się modelem BERT. Jednak w dokumentach [1] i [2] znajdujemy informacje o modelu BERT.\n\nModel BERT jest opisany w dokumentach [1], [2] i [3]. W dokumencie [1] pisze: \"Warianty Transformera: BERT vs. GPT Mamy dwa główne podejścia do trenowania tych modeli: BERT (Encoder-only, Masked Language Model - MLM):\". Dosłowny fragment.\n\nZadanie Masked Language Model jest opisane w dokumencie [1]. Pisze tam: \"Maskujemy losowo ok. 15% tokenów w tekście (zastępujemy je tokenem [MK]). Model widzi cały kontekst (słowa przed i po masce) - jest dwukierunkowy. Zadanie: odgadnąć zamaskowane słowo.\" Dosłowny fragment.\n\nWnioskuję, że model BERT charakteryzuje się tym, że jest modelem neuronalnym, który może trenować się na różnych zadanach NLP, w tym również na zadaniu Masked Language Model.",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [
+        "BERT",
+        "GPT"
+      ],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Czym jest Cell State (C_t) w sieciach LSTM i dlaczego nazywany jest autostradą dla gradientu?",
+    "answer": "BRAK INFORMACJI.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Opis",
+      "score": 0
+    }
+  },
+  {
+    "query": "Jak zdefiniowana jest funkcja aktywacji ReLU?",
+    "answer": "Odpowiedź oparta na [2] (Autor: Aleksander Smywiński-Pohl): \nFunkcje aktywacji: Sigmoida i Tangens hiperboliczny (Tanh): Kiedyś bardzo popularne, inspirowane zasadą \"wszystko albo nic\". Dziś rzadziej używane w głębokich sieciach z powodu problemu zanikającego gradientu (pochodna bliska zeru w dużej części dziedziny, co spowalnia naukę). ReLU (Rectified Linear Unit): Prosta funkcja (max(0, x)).",
+    "evaluation": {
+      "label": "Relevant",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Brak",
+      "score": 2
+    }
+  },
+  {
+    "query": "Na czym polega podstawowa idea działania sieci rekurencyjnych (RNN)?",
+    "answer": "BRAK INFORMACJI.",
+    "evaluation": {
+      "label": "Noise",
+      "entities_in_answer": [],
+      "dates_in_answer": [],
+      "hallucinations": "Opis",
+      "score": 0
+    }
+  }
+]

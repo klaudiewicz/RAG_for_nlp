@@ -1,4 +1,5 @@
 from reasoning.chunking import chunk_document
+
 def generate_answer_variant(user_input, docs, client_ollama, variant="A"):
     if not docs:
         return "Brak kontekstu.", []

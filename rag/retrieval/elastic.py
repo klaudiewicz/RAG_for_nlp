@@ -1,9 +1,9 @@
-from elasticsearch import Elasticsearch
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from config import ES_INDEX_NAME, es
 
-# Inicjalizacja ES
-es = Elasticsearch("http://localhost:9200")
-
-def search_es(query_text, index_name="culturax_vectors", limit=15):
+def search_es(query_text, index_name=ES_INDEX_NAME, limit=15):
     es_query = {
         "query": {
             "multi_match": {

@@ -37,30 +37,6 @@
       "years_hint": [
         2026
       ]
-    },
-    {
-      "id": 4,
-      "timestamp": "2026-01-13 19:59:06",
-      "query": "Kto i kiedy wprowadził LSTM?",
-      "status": "retry_later",
-      "attempts": 0,
-      "reason": "Niska jakość odpowiedzi (Score: 0, Label: Noise)",
-      "entities_hint": [
-        "LSTM"
-      ],
-      "years_hint": []
-    },
-    {
-      "id": 5,
-      "timestamp": "2026-01-13 20:00:22",
-      "query": "Jakie modele NLP powstały po roku 2026?",
-      "status": "ready_to_notify",
-      "attempts": 0,
-      "reason": "Niska jakość odpowiedzi (Score: 0, Label: Noise)",
-      "entities_hint": [],
-      "years_hint": [
-        2026
-      ]
     }
   ]
 }
